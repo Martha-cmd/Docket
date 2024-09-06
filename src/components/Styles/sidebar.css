@@ -1,0 +1,65 @@
+.rotate-add {
+  transform: rotate(0deg);
+}
+
+.rotate-close {
+  transform: rotate(45deg); /* Adjust angle as desired */
+}
+
+.icon-container {
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes pourDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pourUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.animate-pour {
+  animation: pourDown 0.7s ease forwards;
+}
+
+.hidden .animate-pour {
+  animation: pourUp 0.7s ease forwards;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.delay-150 {
+  animation-delay: 0.15s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-450 {
+  animation-delay: 0.45s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
