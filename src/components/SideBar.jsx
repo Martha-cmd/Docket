@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { IoAddCircle, IoCloseCircle } from "react-icons/io5";
-import "./Styles/sideBar.css";
 import { CgMenuLeft } from "react-icons/cg";
 import { RiCloseFill } from "react-icons/ri";
+import "../components/Styles/siebar.css";
 
 const SideBar = ({ createNote }) => {
   const [closeIconSmall, setCloseIconSmall] = useState(true);
