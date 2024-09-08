@@ -12,8 +12,9 @@ const Search = ({ onSearch }) => {
   return (
     <>
       <form className="w-full">
-        <div className="flex items-center gap-2 w-[50%]">
-          <FiSearch className="text-gray-400" />
+        <div className="flex items-center gap-2 md:w-[50%] md:mt-0 mt-20">
+          <FiSearch width={100} className="text-gray-400" />
+
           <input
             type="text"
             placeholder="Search"

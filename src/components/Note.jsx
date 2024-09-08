@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import Modal from "./Modal";
 
-const Note = ({ index, color, date, content, updateContent, onDelete }) => {
+const Note = ({ color, date, content, updateContent, onDelete }) => {
   const [note, setNote] = useState("");
   const [showModal, setShowModal] = useState(false);
 
@@ -17,23 +17,22 @@ const Note = ({ index, color, date, content, updateContent, onDelete }) => {
   };
 
   const handleDeleteClick = () => {
-    setShowModal(true); // Show modal when delete is clicked
+    setShowModal(true);
   };
 
   const handleConfirmDelete = () => {
-    console.log("Deleting note at index:", index);
-    onDelete(); // Trigger delete action
-    setShowModal(false); // Close modal after confirmation
+    onDelete();
+    setShowModal(false);
   };
 
   const handleCloseModal = () => {
-    setShowModal(false); // Close modal without deleting
+    setShowModal(false);
   };
 
   return (
     <>
       <div
-        className={`w-[250px] h-[250px] ${color} rounded-[20px] py-7 px-5 flex flex-col justify-between text-black`}
+        className={`md:w-[250px] w-full md:h-[250px] h-[200px] ${color} rounded-[20px] md:py-7 py-4 md:px-5 px-2 flex flex-col justify-between text-black`}
       >
         <form className="w-full h-full">
           <div className="w-full h-full ">

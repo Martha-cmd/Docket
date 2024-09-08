@@ -3,7 +3,7 @@
 }
 
 .rotate-close {
-  transform: rotate(45deg); /* Adjust angle as desired */
+  transform: rotate(45deg);
 }
 
 .icon-container {
@@ -36,16 +36,8 @@
   animation: pourDown 0.7s ease forwards;
 }
 
-.hidden .animate-pour {
-  animation: pourUp 0.7s ease forwards;
-}
-
-.visible {
-  display: block;
-}
-
-.hidden {
-  display: none;
+.animate-pour {
+  animation: pourDown 0.7s ease;
 }
 
 .delay-150 {

@@ -2,7 +2,7 @@
 import React from "react";
 
 const Modal = ({ show, onClose, onConfirm, title, message }) => {
-  if (!show) return null; // Do not render the modal if `show` is false
+  if (!show) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">

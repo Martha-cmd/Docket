@@ -23,7 +23,7 @@ const Body = ({ notes, setNotes }) => {
   };
   return (
     <>
-      <main className="w-full max-h-full flex flex-col py-5 px-16 gap-16 ml-[20%] border-gray-200 border-l-[1px]">
+      <main className="w-full h-full flex flex-col py-5 pb-20 md:px-16 px-5 gap-16 md:ml-[20%] ">
         <Search onSearch={handleSearch} />
         <Notes notes={filteredNotes} setNotes={setNotes} />
       </main>

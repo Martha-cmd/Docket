@@ -3,11 +3,9 @@ import Body from "./components/Body";
 import SideBar from "./components/SideBar";
 
 function App() {
-  // const [notes, setNotes] = useState([]);
   const [notes, setNotes] = useState(() => {
     try {
       const savedNotes = localStorage.getItem("docketNotes");
-      console.log(savedNotes);
       return savedNotes ? JSON.parse(savedNotes) : [];
     } catch (error) {
       console.error("Error parsing localStorage data: ", error);

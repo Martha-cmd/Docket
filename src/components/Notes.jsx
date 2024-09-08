@@ -14,7 +14,7 @@ const Notes = ({ notes, setNotes }) => {
         <h1 className="font-bold text-5xl">Notes</h1>
 
         {notes.length > 0 ? (
-          <div className="w-full flex flex-wrap gap-10">
+          <div className="w-full md:flex flex-wrap grid grid-cols-2 md:gap-10 gap-x-2 gap-y-5">
             {notes.map((note, noteIndex) => (
               <Note
                 key={noteIndex}
