@@ -28,7 +28,10 @@ function App() {
       day: "2-digit",
     }).format(today);
     setDate(dateToday);
-    setNotes([...notes, { color, content: "", date: dateToday }]);
+    // setNotes([...notes, { color, content: "", date: dateToday }]);
+
+    // Add the new note at the beginning of the array
+    setNotes([{ color, content: "", date: dateToday }, ...notes]);
   };
   return (
     <>

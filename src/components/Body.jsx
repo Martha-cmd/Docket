@@ -4,12 +4,14 @@ import Notes from "./Notes";
 
 const Body = ({ notes, setNotes }) => {
   const [filteredNotes, setFilteredNotes] = useState(notes);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     setFilteredNotes(notes);
   }, [notes]);
 
   const handleSearch = (query) => {
+    setSearchQuery(query);
     if (query) {
       const searchResults = notes.filter(
         (note) =>
@@ -25,7 +27,11 @@ const Body = ({ notes, setNotes }) => {
     <>
       <main className="w-full h-full flex flex-col py-5 pb-20 md:px-16 px-5 gap-16 md:ml-[20%] ">
         <Search onSearch={handleSearch} />
-        <Notes notes={filteredNotes} setNotes={setNotes} />
+        <Notes
+          notes={filteredNotes}
+          setNotes={setNotes}
+          searchQuery={searchQuery}
+        />
       </main>
     </>
   );

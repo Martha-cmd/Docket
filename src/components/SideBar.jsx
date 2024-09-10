@@ -9,19 +9,22 @@ const SideBar = ({ createNote }) => {
   const [closeIconLarge, setCloseIconLarge] = useState(true);
   const [menu, setShowMenu] = useState(false);
 
-  const toggleIconSmall = (e) => {
-    e.stopPropagation();
+  const toggleIconSmall = () => {
     setCloseIconSmall(!closeIconSmall);
   };
 
-  const toggleIconLarge = (e) => {
-    e.stopPropagation();
+  const toggleIconLarge = () => {
     setCloseIconLarge(!closeIconLarge);
   };
 
   const handleMenuToggle = () => {
     setShowMenu(!menu);
     console.log("clicked");
+  };
+
+  const handleCreateNote = (color) => {
+    createNote(color); // Create the note
+    setShowMenu(false); // Close the modal on small screens
   };
 
   return (
@@ -63,23 +66,23 @@ const SideBar = ({ createNote }) => {
           >
             <div
               className="w-4 h-4 rounded-full bg-orange-300 animate-pour"
-              onClick={() => createNote("bg-orange-300")}
+              onClick={() => handleCreateNote("bg-orange-300")}
             ></div>
             <div
               className="w-4 h-4 rounded-full bg-red-300 animate-pour delay-150"
-              onClick={() => createNote("bg-red-300")}
+              onClick={() => handleCreateNote("bg-red-300")}
             ></div>
             <div
               className="w-4 h-4 rounded-full bg-purple-400 animate-pour delay-300"
-              onClick={() => createNote("bg-purple-400")}
+              onClick={() => handleCreateNote("bg-purple-400")}
             ></div>
             <div
               className="w-4 h-4 rounded-full bg-blue-400 animate-pour delay-450"
-              onClick={() => createNote("bg-blue-400")}
+              onClick={() => handleCreateNote("bg-blue-400")}
             ></div>
             <div
               className="w-4 h-4 rounded-full bg-lime-200 animate-pour delay-600"
-              onClick={() => createNote("bg-lime-200")}
+              onClick={() => handleCreateNote("bg-lime-200")}
             ></div>
           </div>
         </div>
